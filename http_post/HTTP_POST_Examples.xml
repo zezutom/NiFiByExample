@@ -250,7 +250,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>PostHTTP</name>
+          <name>Submit new post</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>failure</name>
@@ -324,7 +324,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>GenerateFlowFile</name>
+          <name>Trigger the flow</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -403,7 +403,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Define request parameters</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -473,7 +473,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>AttributesToJSON</name>
+          <name>Turn request parameters into JSON</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>failure</name>
@@ -727,7 +727,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>GenerateFlowFile</name>
+          <name>Trigger the flow</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -796,7 +796,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Define request parameters</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -1057,7 +1057,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>InvokeHTTP</name>
+          <name>Make a new post</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>Failure</name>
@@ -1143,7 +1143,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>AttributesToJSON</name>
+          <name>Turn request parameters to JSON</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>failure</name>
@@ -1237,7 +1237,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>ReplaceText</name>
+          <name>Replace a placeholder</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>failure</name>
@@ -1291,7 +1291,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>RouteOnAttribute</name>
+          <name>Iterate</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>loop.next</name>
@@ -1344,7 +1344,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Increment the counter</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -1393,7 +1393,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Initialise a counter</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -1622,7 +1622,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>GenerateFlowFile</name>
+          <name>Trigger the flow</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -1671,7 +1671,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Initialise a counter</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -1932,7 +1932,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>InvokeHTTP</name>
+          <name>Make a new post</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>Failure</name>
@@ -2017,7 +2017,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Define request parameters</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -2067,7 +2067,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>RouteOnAttribute</name>
+          <name>Iterate</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>loop.next</name>
@@ -2120,7 +2120,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Increment the counter</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -2190,7 +2190,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>AttributesToJSON</name>
+          <name>Turn request parameters into JSON</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>failure</name>
@@ -2339,7 +2339,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>GenerateFlowFile</name>
+          <name>Trigger the flow</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -2408,7 +2408,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>UpdateAttribute</name>
+          <name>Define request parameters</name>
           <relationships>
             <autoTerminate>false</autoTerminate>
             <name>success</name>
@@ -2669,7 +2669,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>InvokeHTTP</name>
+          <name>Submit a new post</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>Failure</name>
@@ -2755,7 +2755,7 @@
             <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
             <yieldDuration>1 sec</yieldDuration>
           </config>
-          <name>AttributesToJSON</name>
+          <name>Turn request parameters into JSON</name>
           <relationships>
             <autoTerminate>true</autoTerminate>
             <name>failure</name>
@@ -2771,5 +2771,5 @@
       <name>HTTP Post via InvokeHTTP</name>
     </processGroups>
   </snippet>
-  <timestamp>10/29/2016 11:33:24 BST</timestamp>
+  <timestamp>10/30/2016 00:39:14 BST</timestamp>
 </template>

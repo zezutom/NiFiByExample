@@ -213,7 +213,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>GenerateFlowFile</name>
+      <name>Trigger the flow</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
         <name>success</name>
@@ -262,7 +262,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>UpdateAttribute</name>
+      <name>Initialise a counter</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
         <name>success</name>
@@ -523,7 +523,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>InvokeHTTP</name>
+      <name>Make a new post</name>
       <relationships>
         <autoTerminate>true</autoTerminate>
         <name>Failure</name>
@@ -608,7 +608,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>UpdateAttribute</name>
+      <name>Define request parameters</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
         <name>success</name>
@@ -658,7 +658,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>RouteOnAttribute</name>
+      <name>Iterate</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
         <name>loop.next</name>
@@ -711,7 +711,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>UpdateAttribute</name>
+      <name>Increment the counter</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
         <name>success</name>
@@ -781,7 +781,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>AttributesToJSON</name>
+      <name>Turn request parameters into JSON</name>
       <relationships>
         <autoTerminate>true</autoTerminate>
         <name>failure</name>
@@ -794,5 +794,5 @@
       <type>org.apache.nifi.processors.standard.AttributesToJSON</type>
     </processors>
   </snippet>
-  <timestamp>10/29/2016 11:35:09 BST</timestamp>
+  <timestamp>10/30/2016 00:27:50 BST</timestamp>
 </template>
