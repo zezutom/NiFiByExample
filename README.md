@@ -13,7 +13,7 @@
 | Post JSON using the PostHTTP processor.  | [POST_via_PostHTTP.xml](templates/http_post/POST_via_PostHTTP.xml)  |
 | Post a dynamically built JSON.  | [POST_with_a_Dynamic_Body.xml](templates/http_post/POST_with_a_Dynamic_Body.xml)  |
 | Post a dynamically built JSON using regex text replacement.  | [POST_with_a_Dynamic_Body_using_ReplaceText.xml](templates/http_post/POST_with_a_Dynamic_Body_using_ReplaceText.xml)  |
-| Post JSON using a custom processor [PostHTTPWithJsonBody](processors/src/main/java/org/zezutom/processors/nifi/example/PostHTTPWithJsonBody.java).  | [POST_with_a_Dynamic_Body_using_a_Custom_Processor.xml](templates/http_post/POST_with_a_Dynamic_Body_using_a_Custom_Processor.xml)  |
+| Post JSON using a custom processor [PostHTTPWithJsonBody](nifi-processors/src/main/java/org/zezutom/processors/nifi/example/PostHTTPWithJsonBody.java).  | [POST_with_a_Dynamic_Body_using_a_Custom_Processor.xml](templates/http_post/POST_with_a_Dynamic_Body_using_a_Custom_Processor.xml)  |
 | Download all examples as a single package.  | [HTTP_POST_Examples.xml](templates/http_post/HTTP_POST_Examples.xml)  |
 
 ### SSL
