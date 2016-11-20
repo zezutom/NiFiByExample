@@ -40,6 +40,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Tags({"http", "https", "remote", "json"})
 @InputRequirement(InputRequirement.Requirement.INPUT_ALLOWED)
@@ -47,6 +48,13 @@ import java.util.*;
 public class PostHTTPWithJsonBody extends AbstractProcessor {
 
     public static final String PROTOCOL_HTTPS = "https";
+
+    /** Logging **/
+    public static final String REQ_LOG_FORMAT = "Method: '%s' | URL: '%s' | Headers: %s | Body: '%s'";
+
+    public static final String HEADER_LOG_FORMAT = "%s: %s";
+
+    public static final String RECORD_DELIMITER = ",";
 
     /** Request Properties **/
 
@@ -164,7 +172,6 @@ public class PostHTTPWithJsonBody extends AbstractProcessor {
             // Make a POST request
             HttpURLConnection connection = httpPost(context, url, json);
 
-
             // Capture response properties and headers as attributes
             Map<String, String> attributes = parseResponseAttributes(connection);
             flowFile = session.putAllAttributes(flowFile, attributes);
@@ -196,8 +203,8 @@ public class PostHTTPWithJsonBody extends AbstractProcessor {
         attributes.put(RES_STATUS_CODE, String.valueOf(connection.getResponseCode()));
         attributes.put(RES_STATUS_MESSAGE, connection.getResponseMessage());
         attributes.put(RES_HOST_URL, connection.getURL().getHost());
-        attributes.put(RES_BODY, parseResponseBody(connection));
         attributes.put(CoreAttributes.MIME_TYPE.key(), connection.getContentType());
+        attributes.put(RES_BODY, parseResponseBody(connection));
         return attributes;
     }
 
@@ -245,7 +252,23 @@ public class PostHTTPWithJsonBody extends AbstractProcessor {
             writer.write(json);
             writer.flush();
         }
+
+        // Log the request (debug only)
+        logger.debug(String.format(REQ_LOG_FORMAT,
+                connection.getRequestMethod(),
+                connection.getURL().toString(),
+                flattenHeaders(connection),
+                json));
         return connection;
+    }
+
+    private String flattenHeaders(HttpURLConnection connection) {
+        List<String> headers = connection.getHeaderFields().entrySet().stream()
+                .map(entry ->
+                        String.format(HEADER_LOG_FORMAT, entry.getKey(),
+                        String.join(RECORD_DELIMITER, entry.getValue())))
+                .collect(Collectors.toList());
+        return String.join(RECORD_DELIMITER, headers);
     }
 
     private String parseJsonBody(ProcessContext context, FlowFile flowFile) {
