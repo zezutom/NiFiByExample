@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 public class HTTPClient {
 
-    public static final String PROTOCOL_HTTPS = "https";
+    private static final String PROTOCOL_HTTPS = "https";
 
     /** Request Properties **/
 
@@ -44,15 +44,14 @@ public class HTTPClient {
     public static final String REQ_METHOD_POST = "POST";
 
 
-    /** Response Properties **/
+    /** Response Attributes **/
+    public static final String ATT_RES_STATUS_CODE = "status.code";
 
-    public static final String RES_STATUS_CODE = "status.code";
+    public static final String ATT_RES_STATUS_MESSAGE = "status.message";
 
-    public static final String RES_STATUS_MESSAGE = "status.message";
+    public static final String ATT_RES_BODY = "response.body";
 
-    public static final String RES_BODY = "response.body";
-
-    public static final String RES_HOST_URL = "host.url";
+    public static final String ATT_RES_HOST_URL = "host.url";
 
 
     /** Logging **/
@@ -62,14 +61,11 @@ public class HTTPClient {
 
     public static final String RECORD_DELIMITER = ",";
 
-
     private SSLContextService sslContextService;
 
     private ComponentLog logger;
 
-    public HTTPClient() {}
-
-    public HTTPClient(SSLContextService sslContextService, ComponentLog logger) {
+    HTTPClient(SSLContextService sslContextService, ComponentLog logger) {
         this.sslContextService = sslContextService;
         this.logger = logger;
     }
@@ -131,11 +127,11 @@ public class HTTPClient {
 
     private Map<String, String> parseResponseAttributes(HttpURLConnection connection) throws IOException {
         Map<String, String> attributes = new HashMap<>();
-        attributes.put(RES_STATUS_CODE, String.valueOf(connection.getResponseCode()));
-        attributes.put(RES_STATUS_MESSAGE, connection.getResponseMessage());
-        attributes.put(RES_HOST_URL, connection.getURL().getHost());
+        attributes.put(ATT_RES_STATUS_CODE, String.valueOf(connection.getResponseCode()));
+        attributes.put(ATT_RES_STATUS_MESSAGE, connection.getResponseMessage());
+        attributes.put(ATT_RES_HOST_URL, connection.getURL().getHost());
         attributes.put(CoreAttributes.MIME_TYPE.key(), connection.getContentType());
-        attributes.put(RES_BODY, parseResponseBody(connection));
+        attributes.put(ATT_RES_BODY, parseResponseBody(connection));
         return attributes;
     }
 
@@ -147,34 +143,6 @@ public class HTTPClient {
                 sb.append(inputLine);
             }
             return sb.toString();
-        }
-    }
-
-    static class ResponseBuilder {
-
-        private final Map<String, String> attributes = new HashMap<>();
-
-        private String message;
-
-        private int status;
-
-        ResponseBuilder newInstance(int status) {
-            this.status = status;
-            return this;
-        }
-
-        ResponseBuilder setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-
-        ResponseBuilder addAttribute(String name, String value) {
-            attributes.put(name, value);
-            return this;
-        }
-
-        HTTPResponse build() {
-            return new HTTPResponse(attributes, message, status);
         }
     }
 }

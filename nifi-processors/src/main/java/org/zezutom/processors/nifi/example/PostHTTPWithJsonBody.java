@@ -73,6 +73,7 @@ public class PostHTTPWithJsonBody extends AbstractProcessor {
             .description("Status codes 4xx and 5xx.")
             .build();
 
+    public static final String ATT_ERROR_MESSAGE = "error.message";
 
     private ComponentLog logger;
 
@@ -91,13 +92,13 @@ public class PostHTTPWithJsonBody extends AbstractProcessor {
 
     @Override
     protected void init(final ProcessorInitializationContext context) {
-        final List<PropertyDescriptor> descriptors = new ArrayList<PropertyDescriptor>();
+        final List<PropertyDescriptor> descriptors = new ArrayList<>();
         descriptors.add(PROP_URL);
         descriptors.add(PROP_BODY);
         descriptors.add(PROP_SSL_CONTEXT_SERVICE);
         this.descriptors = Collections.unmodifiableList(descriptors);
 
-        final Set<Relationship> relationships = new HashSet<Relationship>();
+        final Set<Relationship> relationships = new HashSet<>();
         relationships.add(REL_SUCCESS);
         relationships.add(REL_FAILURE);
         this.relationships = Collections.unmodifiableSet(relationships);
@@ -141,7 +142,7 @@ public class PostHTTPWithJsonBody extends AbstractProcessor {
             flowFile = session.putAllAttributes(flowFile, httpResponse.getAttributes());
 
             // Capture response body
-            String resBody = httpResponse.getAttribute(HTTPClient.RES_BODY);
+            String resBody = httpResponse.getAttribute(HTTPClient.ATT_RES_BODY);
             if (resBody != null) {
                 flowFile = session.write(flowFile, outputStream -> outputStream.write(resBody.getBytes()));
             }
@@ -154,11 +155,12 @@ public class PostHTTPWithJsonBody extends AbstractProcessor {
             else {
                 logger.error(String.format("There was an error with POST request, status: %s, response message: '%s'",
                         status, httpResponse.getMessage()));
+                flowFile = session.putAttribute(flowFile, ATT_ERROR_MESSAGE, httpResponse.getMessage());
                 session.transfer(flowFile, REL_FAILURE);
             }
         } catch (IOException e) {
             session.transfer(flowFile, REL_FAILURE);
-            throw new ProcessException("Invalid URL", e);
+            throw new ProcessException("Error when processing request", e);
         }
     }
 
