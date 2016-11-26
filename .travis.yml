@@ -1,0 +1,13 @@
+language: java
+
+scala:
+  - 2.11.7
+
+jdk:
+  - oraclejdk8
+
+script:
+  - mvn clean test
+
+after_success:
+  - mvn clean cobertura:cobertura coveralls:report
