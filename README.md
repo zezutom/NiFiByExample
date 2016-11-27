@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/zezutom/NiFiByExample.svg?branch=master)](https://travis-ci.org/zezutom/NiFiByExample)
+[![Coverage Status](https://coveralls.io/repos/github/zezutom/NiFiByExample/badge.svg?branch=master)](https://coveralls.io/github/zezutom/NiFiByExample?branch=master)
 
 # NiFi by Example
 
