@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/zezutom/NiFiByExample.svg?branch=master)](https://travis-ci.org/zezutom/NiFiByExample)
+
 # NiFi by Example
 
 ## Custom Processors
