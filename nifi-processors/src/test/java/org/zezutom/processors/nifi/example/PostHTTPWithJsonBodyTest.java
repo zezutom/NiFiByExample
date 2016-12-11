@@ -67,13 +67,13 @@ public class PostHTTPWithJsonBodyTest {
 
         // Verify all has been set correctly
         testRunner.assertValid();
+
+        // Create a setup for success
+        when(httpResponse.getStatus()).thenReturn(HttpURLConnection.HTTP_CREATED);
     }
 
     @Test
     public void singleCallOnSuccess() {
-        // Create a setup for success
-        when(httpResponse.getStatus()).thenReturn(HttpURLConnection.HTTP_CREATED);
-
         // Call onTrigger() exactly once
         testRunner.run();
 
@@ -88,16 +88,9 @@ public class PostHTTPWithJsonBodyTest {
 
         // Verify that response body has also been passed as content
         flowFile.assertContentEquals(responseAttributes.get(HTTPClient.ATT_RES_BODY));
-    }
 
-    private MockFlowFile getMockFlowFile(Relationship relationship) {
-        List<MockFlowFile> flowFiles = testRunner.getFlowFilesForRelationship(relationship);
-        assertNotNull(flowFiles);
-        assertTrue(flowFiles.size() == 1);
-
-        MockFlowFile flowFile = flowFiles.get(0);
-        assertNotNull(flowFile);
-        return flowFile;
+        // Verify the processor queue has been emptied
+        testRunner.assertQueueEmpty();
     }
 
     @Test
@@ -118,6 +111,40 @@ public class PostHTTPWithJsonBodyTest {
         // Verify the error message has been captured
         MockFlowFile flowFile = getMockFlowFile(PostHTTPWithJsonBody.REL_FAILURE);
         flowFile.assertAttributeEquals(PostHTTPWithJsonBody.ATT_ERROR_MESSAGE, errorMessage);
+
+        // Verify the processor queue has been emptied
+        testRunner.assertQueueEmpty();
     }
+
+    @Test
+    public void acceptsIncomingFlowFiles() {
+        // Enqueue a new flow file to simulate a variable (counter) used in the request
+        testRunner.enqueue("test");
+
+        // Trigger a new call
+        testRunner.run();
+
+        // Verify all is fine
+        testRunner.assertValid();
+
+        // Verify the processor queue has been emptied
+        testRunner.assertQueueEmpty();
+    }
+
+    @Test
+    public void submitsJsonAsSpecifiedInTheBodyAttribute() {
+        //
+    }
+
+    private MockFlowFile getMockFlowFile(Relationship relationship) {
+        List<MockFlowFile> flowFiles = testRunner.getFlowFilesForRelationship(relationship);
+        assertNotNull(flowFiles);
+        assertTrue(flowFiles.size() == 1);
+
+        MockFlowFile flowFile = flowFiles.get(0);
+        assertNotNull(flowFile);
+        return flowFile;
+    }
+
 
 }
