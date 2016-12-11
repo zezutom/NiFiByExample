@@ -27,4 +27,4 @@
 ### Streaming
 | Description  | Template |
 | ------------- | ------------- |
-| Web Proxy Analysis: [Proxy Log Generator](https://github.com/zezutom/proxy-log-generator) + Kafka  | [Web_Proxy_Analysis.xml](templates/streaming/web_proxy_analysis.xml.xml)  |
+| Web Proxy Analysis: [Proxy Log Generator](https://github.com/zezutom/proxy-log-generator) + Kafka  | [Web_Proxy_Analysis.xml](templates/streaming/web_proxy_analysis.xml)  |
