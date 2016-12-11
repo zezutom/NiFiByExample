@@ -23,3 +23,8 @@
 | Description  | Template |
 | ------------- | ------------- |
 | SSLContextService config (key store, trust store)  | [SSL_Service_Config.xml](templates/http_post/SSL_Service_Config.xml)  |
+
+### Streaming
+| Description  | Template |
+| ------------- | ------------- |
+| Web Proxy Analysis  | [Web_Proxy_Analysis.xml](templates/streaming/web_proxy_analysis.xml.xml)  |
