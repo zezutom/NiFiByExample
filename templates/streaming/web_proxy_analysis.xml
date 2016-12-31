@@ -68,152 +68,6 @@
       <zIndex>0</zIndex>
     </connections>
     <connections>
-      <id>ed569df9-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed4f8536-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>matched</selectedRelationships>
-      <source>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed547c49-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>ed571001-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed547c49-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>matched</selectedRelationships>
-      <source>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>eaec29f4-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>ed576179-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed4f6455-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>unmatched</selectedRelationships>
-      <source>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed547c49-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>ed587e03-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed586565-0158-1000-0000-000000000000</id>
-        <type>FUNNEL</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>success</selectedRelationships>
-      <source>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed4e7eb3-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>ed58973b-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed586565-0158-1000-0000-000000000000</id>
-        <type>FUNNEL</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>success</selectedRelationships>
-      <source>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed4f8536-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>ed58bb6c-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed586565-0158-1000-0000-000000000000</id>
-        <type>FUNNEL</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>success</selectedRelationships>
-      <source>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed4f6455-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>ed58fb72-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed4b15f5-0158-1000-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <source>
-        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
-        <id>ed586565-0158-1000-0000-000000000000</id>
-        <type>FUNNEL</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
       <id>11794866-0159-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -234,19 +88,74 @@
       </source>
       <zIndex>0</zIndex>
     </connections>
-    <funnels>
-      <id>ed586565-0158-1000-0000-000000000000</id>
+    <connections>
+      <id>4b8b6395-0159-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <position>
-        <x>1261.9999912378198</x>
-        <y>828.9999737033379</y>
-      </position>
-    </funnels>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
+        <id>ed4f8536-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>matched</selectedRelationships>
+      <source>
+        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
+        <id>eaec29f4-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>4b8c450c-0159-1000-0000-000000000000</id>
+      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
+        <id>ed4b15f5-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
+        <id>ed4f8536-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>4b8c553e-0159-1000-0000-000000000000</id>
+      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
+        <id>ed4b15f5-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>c97fde47-0158-1000-0000-000000000000</groupId>
+        <id>ed4e7eb3-0158-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
     <processors>
       <id>c98038dc-0158-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>0.0</x>
+        <x>253.44178122311757</x>
         <y>0.0</y>
       </position>
       <config>
@@ -344,7 +253,7 @@
       <id>e8042e4e-0158-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>1.999991237819927</x>
+        <x>255.4417724609375</x>
         <y>273.9999737033378</y>
       </position>
       <config>
@@ -442,7 +351,7 @@
       <id>eaec29f4-0158-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>1.999991237819927</x>
+        <x>255.4417724609375</x>
         <y>537.9999737033378</y>
       </position>
       <config>
@@ -496,7 +405,7 @@
       <id>ed0647db-0158-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>631.4156406518824</x>
+        <x>884.857421875</x>
         <y>11.168739725066274</y>
       </position>
       <config>
@@ -578,8 +487,8 @@
       <id>ed4b15f5-0158-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>1103.9999912378198</x>
-        <y>1056.0000347384942</y>
+        <x>293.72320556640625</x>
+        <y>1089.053440500213</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -739,8 +648,8 @@
       <id>ed4e7eb3-0158-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>638.9999912378199</x>
-        <y>531.9999737033378</y>
+        <x>575.4296875</x>
+        <y>800.9344219455253</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -768,7 +677,7 @@
           </entry>
           <entry>
             <key>kafka.topic</key>
-            <value>err_logs</value>
+            <value>error_logs</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -785,60 +694,11 @@
       <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
     </processors>
     <processors>
-      <id>ed4f6455-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <position>
-        <x>641.9999912378199</x>
-        <y>973.9999737033378</y>
-      </position>
-      <config>
-        <bulletinLevel>WARN</bulletinLevel>
-        <comments></comments>
-        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-        <descriptors>
-          <entry>
-            <key>Delete Attributes Expression</key>
-            <value>
-              <name>Delete Attributes Expression</name>
-            </value>
-          </entry>
-          <entry>
-            <key>kafka.topic</key>
-            <value>
-              <name>kafka.topic</name>
-            </value>
-          </entry>
-        </descriptors>
-        <lossTolerant>false</lossTolerant>
-        <penaltyDuration>30 sec</penaltyDuration>
-        <properties>
-          <entry>
-            <key>Delete Attributes Expression</key>
-          </entry>
-          <entry>
-            <key>kafka.topic</key>
-            <value>success_auth_logs</value>
-          </entry>
-        </properties>
-        <runDurationMillis>0</runDurationMillis>
-        <schedulingPeriod>0 sec</schedulingPeriod>
-        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-        <yieldDuration>1 sec</yieldDuration>
-      </config>
-      <name>Kafka Topic: Success + Auth</name>
-      <relationships>
-        <autoTerminate>false</autoTerminate>
-        <name>success</name>
-      </relationships>
-      <style></style>
-      <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
-    </processors>
-    <processors>
       <id>ed4f8536-0158-1000-0000-000000000000</id>
       <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
       <position>
-        <x>638.9999912378199</x>
-        <y>789.9999737033378</y>
+        <x>0.0</x>
+        <y>803.5218242892753</y>
       </position>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -866,7 +726,7 @@
           </entry>
           <entry>
             <key>kafka.topic</key>
-            <value>success_anon_logs</value>
+            <value>success_logs</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -874,7 +734,7 @@
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>Kafka Topic: Success + Anon</name>
+      <name>Kafka Topic: Success Logs</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
         <name>success</name>
@@ -882,60 +742,6 @@
       <style></style>
       <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
     </processors>
-    <processors>
-      <id>ed547c49-0158-1000-0000-000000000000</id>
-      <parentGroupId>c97fde47-0158-1000-0000-000000000000</parentGroupId>
-      <position>
-        <x>1.999991237819927</x>
-        <y>789.9999737033378</y>
-      </position>
-      <config>
-        <bulletinLevel>WARN</bulletinLevel>
-        <comments></comments>
-        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-        <descriptors>
-          <entry>
-            <key>Routing Strategy</key>
-            <value>
-              <name>Routing Strategy</name>
-            </value>
-          </entry>
-          <entry>
-            <key>matched</key>
-            <value>
-              <name>matched</name>
-            </value>
-          </entry>
-        </descriptors>
-        <lossTolerant>false</lossTolerant>
-        <penaltyDuration>30 sec</penaltyDuration>
-        <properties>
-          <entry>
-            <key>Routing Strategy</key>
-            <value>Route to Property name</value>
-          </entry>
-          <entry>
-            <key>matched</key>
-            <value>${auth.status:equals('-')}</value>
-          </entry>
-        </properties>
-        <runDurationMillis>0</runDurationMillis>
-        <schedulingPeriod>0 sec</schedulingPeriod>
-        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-        <yieldDuration>1 sec</yieldDuration>
-      </config>
-      <name>Anonymous</name>
-      <relationships>
-        <autoTerminate>false</autoTerminate>
-        <name>matched</name>
-      </relationships>
-      <relationships>
-        <autoTerminate>false</autoTerminate>
-        <name>unmatched</name>
-      </relationships>
-      <style></style>
-      <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
-    </processors>
   </snippet>
-  <timestamp>12/24/2016 19:58:06 CET</timestamp>
+  <timestamp>12/31/2016 12:08:01 GMT</timestamp>
 </template>
